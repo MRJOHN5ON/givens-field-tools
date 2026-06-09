@@ -1,0 +1,41 @@
+/** Mobile-first sizing for calculator tool screens (iOS 44pt / Material 48dp targets). */
+export const calculatorUx = {
+  touch: {
+    minTarget: 48,
+    inputMinHeight: 56,
+    buttonMinHeight: 54,
+    chipPaddingH: 16,
+    chipPaddingV: 12,
+  },
+  type: {
+    sectionHeading: 12,
+    label: 14,
+    body: 16,
+    bodySmall: 14,
+    caption: 13,
+    guideTitle: 15,
+    input: 28,
+    inputUnit: 15,
+    button: 16,
+    back: 14,
+    screenTitle: 26,
+    screenSubtitle: 15,
+    readoutValue: 52,
+    readoutUnit: 20,
+    readoutLabel: 13,
+    statLabel: 12,
+    statValue: 18,
+    chip: 14,
+    nameInput: 20,
+  },
+  lineHeight: {
+    body: 24,
+    bodySmall: 21,
+    caption: 19,
+    subtitle: 22,
+  },
+  spacing: {
+    cardPadding: 20,
+    fieldGap: 16,
+  },
+} as const;

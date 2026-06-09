@@ -8,6 +8,7 @@
       ]
     }
   },
+  "exclude": ["**/*.test.ts"],
   "include": [
     "**/*.ts",
     "**/*.tsx",

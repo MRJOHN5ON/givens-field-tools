@@ -31,7 +31,12 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
+
+# internal docs (not for public repo)
+HANDOFF.md
+PUBLIC_RELEASE_CHECKLIST.md
 
 # typescript
 *.tsbuildinfo
@@ -39,3 +44,10 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# local build artifacts
+*.apk
+*.aab
+
+# editor / agent (optional — keep local)
+.claude/
