@@ -46,6 +46,10 @@ npm run build:apk
 
 Output: `GivensFieldTools.apk` at the project root. Increment `versionCode` in `app.json` before each sideload update.
 
+## Install (Android, sideload)
+
+Not on Google Play yet. Download the latest APK from **[GitHub Releases](https://github.com/MRJOHN5ON/givens-field-tools/releases)**.
+
 ## Privacy
 
 - [Field Tools Privacy Policy](https://www.givensfireandforestry.com/field-tools-privacy)
