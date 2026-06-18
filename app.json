@@ -14,7 +14,7 @@
     },
     "android": {
       "package": "com.givensfire.fieldtools",
-      "versionCode": 2,
+      "versionCode": 3,
       "adaptiveIcon": {
         "backgroundColor": "#000000",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -39,6 +39,13 @@
         }
       ],
       "expo-image",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Givens Field Tools needs photo access so you can upload plant images for identification.",
+          "cameraPermission": "Givens Field Tools needs camera access so you can photograph plants for identification."
+        }
+      ],
       [
         "expo-location",
         {

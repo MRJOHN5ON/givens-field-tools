@@ -45,6 +45,14 @@ export default function HomeScreen() {
               route={tools.wildfireRisk.route}
               image={images.toolWildfireRisk}
               contentPosition={imageFocal.wildfireRisk}
+              style={styles.tileSpacing}
+            />
+            <ToolCard
+              title={tools.plantIdentifier.title}
+              description={tools.plantIdentifier.description}
+              route={tools.plantIdentifier.route}
+              image={images.toolPlantIdentifier}
+              contentPosition={imageFocal.plantIdentifier}
             />
           </View>
 

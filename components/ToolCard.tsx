@@ -1,6 +1,6 @@
 import { Image, type ImageContentPosition, type ImageSource } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useRouter } from 'expo-router';
+import { useRouter, type Href } from 'expo-router';
 import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import { colors } from '@/constants/theme';
 
@@ -33,7 +33,7 @@ export function ToolCard({
 
   return (
     <Pressable
-      onPress={() => router.push(route as '/cord-calculator' | '/tree-height')}
+      onPress={() => router.push(route as Href)}
       style={({ pressed }) => [
         styles.tile,
         styles.tileShadow,

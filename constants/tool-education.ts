@@ -191,3 +191,21 @@ export const wildfireRiskGuide = {
     title: 'How the score is built',
   },
 } as const;
+
+export const plantIdentifierGuide = {
+  overview: {
+    title: 'How it works',
+    steps: [
+      'Add up to 5 photos of the same plant — leaves, flowers, fruit, or bark.',
+      'Tap Identify plant to send photos to Pl@ntNet (North-Central U.S. flora).',
+      'Review top species matches with confidence scores and Montana fire-risk notes.',
+    ],
+  },
+  privacy: {
+    title: 'Privacy',
+    paragraphs: [
+      'No account or login required. Photos are sent directly to Pl@ntNet for identification and are not stored on Givens servers.',
+      'Identification is for educational planning only — not a substitute for professional forestry assessment.',
+    ],
+  },
+} as const;

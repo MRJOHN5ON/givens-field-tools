@@ -44,6 +44,12 @@ export const tools = {
     description: 'Screen surface wildfire risk at your address using fuel maps, weather, and a Rothermel model.',
     route: '/wildfire-risk',
   },
+  plantIdentifier: {
+    id: 'plant-identifier',
+    title: 'Plant Identifier',
+    description: 'Snap a photo to identify species and get Montana fire-risk notes for defensible space planning.',
+    route: '/plant-identifier',
+  },
 } as const;
 
 export const cordCalculator = {
@@ -173,4 +179,55 @@ export const wildfireRisk = {
   nonBurnableHint:
     'Federal fuel maps do not show burnable wildland fuels within ~500m of this pin. That can still happen in very open, agricultural, or lake-front areas.',
   pieTapHint: 'Tap a slice to learn more about each factor.',
+} as const;
+
+export const plantIdentifier = {
+  title: 'Plant & Tree Identifier',
+  subtitle:
+    'Snap a photo, get species matches, and see Montana fire-risk and land-management notes built for homesteaders at the forest edge.',
+  workspaceHeading: 'Identify a Plant or Tree',
+  dropzoneTitleEmpty: 'Add plant photos',
+  dropzoneTitleReady: 'Ready to identify',
+  dropzoneTitleMore: 'Add another photo',
+  dropzoneLede: 'Add up to 5 photos of the same plant.',
+  dropzoneSub: 'Leaf, flower, fruit, or bark — more angles help.',
+  dropzoneHint: 'Tap Identify plant when you\'re ready.',
+  dropzoneNote: 'North-Central U.S. flora · Montana fire-risk notes for 80+ species',
+  takePhoto: 'Take Photo',
+  addPhoto: 'Add Photo',
+  uploadPhotos: 'Upload Photos',
+  addMore: 'Add More',
+  identifyPlant: 'Identify plant',
+  tips: [
+    'Shoot in good light',
+    'Up to 5 photos per plant',
+    'Flowers & leaves beat bark alone',
+  ],
+  privacyNote: 'No account, no login, no data stored on our servers.',
+  loadingTitle: 'Identifying your plant…',
+  loadingHint: 'This may take a few seconds on slower connections',
+  resultsEyebrow: 'Identification complete',
+  resultsHeading: 'Top matches',
+  ctaKicker: 'Next step',
+  tryAgain: 'Identify another plant',
+  retry: 'Try again',
+  errorLead: 'Couldn\'t identify that photo',
+  speciesLibraryHeading: 'Species library',
+  speciesLibraryLede:
+    'Every match includes what it means for your property — fire risk near structures, invasive weed concerns, and when to call for an on-site assessment.',
+  speciesLibraryTopics: [
+    'Conifers & deciduous trees',
+    'Noxious & invasive weeds',
+    'Range & pasture grasses',
+    'Common landscape plants',
+  ],
+  fieldTipsHeading: 'Field tips',
+  fieldTips: [
+    'Flowers and fruit identify more reliably than bark alone.',
+    'Hold steady — blur is the most common reason for weak matches.',
+    'Pair results with our Wildfire Risk Calculator for property-wide screening.',
+  ],
+  disclaimer:
+    'Identification is powered by Pl@ntNet (North-Central U.S. flora) and is for educational planning only — not a substitute for professional forestry assessment or official fire-danger ratings.',
+  guideHeading: 'How it works',
 } as const;

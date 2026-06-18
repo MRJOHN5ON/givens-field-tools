@@ -11,15 +11,17 @@ Mobile field calculators for forestry and wildfire work, built for [Givens Fire 
 | **Cord Calculator** | Yes | Frustum volume for felled logs, multi-log totals, optional species BTU |
 | **Tree Height** | Yes | Five methods (angle, line-of-sight, shadow, clinometer, triangulation) |
 | **Wildfire Risk** | No | Address or GPS → LANDFIRE fuels, weather, Rothermel spread/flame, risk score, 16-day outlook |
+| **Plant Identifier** | No | Photo ID via Pl@ntNet + Montana fire-risk notes for 80+ species |
 
-Cord and tree height match the calculators on [givensfireandforestry.com/toolbox](https://www.givensfireandforestry.com/toolbox). Wildfire risk uses the same logic as the website wildfire calculator.
+Cord and tree height match the calculators on [givensfireandforestry.com/toolbox](https://www.givensfireandforestry.com/toolbox). Wildfire risk and plant identification use the same logic as the website tools.
 
 ## Stack
 
 - Expo SDK 56 · React Native · TypeScript · Expo Router
 - Local persistence via AsyncStorage
 - `expo-location` for optional foreground GPS (wildfire tool only)
-- 26 unit tests (`npm test`)
+- `expo-image-picker` / `expo-image-manipulator` for plant photos (plant identifier only)
+- 29 unit tests (`npm test`)
 
 ## Development
 
@@ -31,6 +33,12 @@ npm start          # Expo dev server
 npm run android    # Dev build on device/emulator (native modules)
 npm test           # Run unit tests
 ```
+
+### Plant identifier notes
+
+- **Device or APK required** — identification calls Pl@ntNet over the network (same proxy as the website).
+- **Camera / photo library permission** is requested only when you tap Take Photo or Upload Photos.
+- Photos are sent only when you tap Identify plant; they are not stored on Givens servers.
 
 ### Wildfire tool notes
 
@@ -53,14 +61,14 @@ Not on Google Play yet. Download the latest APK from **[GitHub Releases](https:/
 ## Privacy
 
 - [Field Tools Privacy Policy](https://www.givensfireandforestry.com/field-tools-privacy)
-- No Givens backend — wildfire lookups go directly from the device to public APIs when the user runs a calculation
+- No Givens backend — wildfire lookups and plant photos go directly from the device to third-party services when you run those tools
 - No analytics SDK, no account required
 
 ## Project layout
 
 ```
-app/                 Screens (home, cord, tree height, wildfire)
-components/          Shared UI + wildfire results
+app/                 Screens (home, cord, tree height, wildfire, plant identifier)
+components/          Shared UI + wildfire/plant-identifier results
 constants/           Copy, theme, images
 hooks/               Calculator state hooks
 lib/                 Math, APIs, persistence, tests

@@ -52,6 +52,7 @@ export default function RootLayout() {
           <Stack.Screen name="cord-calculator" />
           <Stack.Screen name="tree-height" />
           <Stack.Screen name="wildfire-risk" />
+          <Stack.Screen name="plant-identifier" />
         </Stack>
       </View>
     </SafeAreaProvider>
