@@ -1,3 +1,5 @@
+import { File } from 'expo-file-system';
+import { fetch } from 'expo/fetch';
 import { PLANT_IDENTIFIER_CONFIG } from '@/lib/plant-identifier/config';
 import type { CompressedPhoto } from '@/lib/plant-identifier/compress';
 import type { PlantNetResponse } from '@/lib/plant-identifier/types';
@@ -5,11 +7,7 @@ import type { PlantNetResponse } from '@/lib/plant-identifier/types';
 function buildFormData(photos: CompressedPhoto[]): FormData {
   const form = new FormData();
   for (const photo of photos) {
-    form.append('images', {
-      uri: photo.uri,
-      type: photo.type,
-      name: photo.name,
-    } as unknown as Blob);
+    form.append('images', new File(photo.uri), photo.name);
     form.append('organs', 'auto');
   }
   return form;
